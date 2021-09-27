@@ -26,7 +26,7 @@ public class Main {
 
         String inputFile = args[0];
         String outputFile = args[1];
-        Optional<String> avroSchemaFile = args.length > 2 ? of(args[3]) : empty();
+        Optional<String> avroSchemaFile = args.length > 2 ? of(args[2]) : empty();
 
         // Prepare to read .parquet
         HadoopInputFile hadoopInputFile = HadoopInputFile.fromPath(new Path(inputFile), new Configuration());
